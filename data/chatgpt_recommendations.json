@@ -1,0 +1,518 @@
+{
+  "international": [
+    {
+      "domain": "theage.com.au",
+      "name": "The Age",
+      "country": "Australia",
+      "description": "Major Melbourne-based daily paper with strong investigative reporting.",
+      "estimated_lean": "Center",
+      "notes": "Sister paper of Sydney Morning Herald; widely respected."
+    },
+    {
+      "domain": "smh.com.au",
+      "name": "Sydney Morning Herald",
+      "country": "Australia",
+      "description": "Australia's largest newspaper, known for balanced national/international coverage.",
+      "estimated_lean": "Center",
+      "notes": "One of the most trusted APAC English outlets."
+    },
+    {
+      "domain": "abc.net.au",
+      "name": "ABC News Australia",
+      "country": "Australia",
+      "description": "Government-funded broadcaster offering comprehensive news and analysis.",
+      "estimated_lean": "Center-Left",
+      "notes": "High credibility; similar to BBC model."
+    },
+    {
+      "domain": "thehindu.com",
+      "name": "The Hindu",
+      "country": "India",
+      "description": "Leading national newspaper with strong editorial standards.",
+      "estimated_lean": "Center-Left",
+      "notes": "Highly respected internationally."
+    },
+    {
+      "domain": "hindustantimes.com",
+      "name": "Hindustan Times",
+      "country": "India",
+      "description": "Large English-language daily with nationwide circulation.",
+      "estimated_lean": "Center",
+      "notes": "Mainstream and widely trusted."
+    },
+    {
+      "domain": "straitstimes.com",
+      "name": "The Straits Times",
+      "country": "Singapore",
+      "description": "Singapore's newspaper of record; strong Asia-Pacific coverage.",
+      "estimated_lean": "Center",
+      "notes": "Excellent regional reporting."
+    },
+    {
+      "domain": "japantimes.co.jp",
+      "name": "The Japan Times",
+      "country": "Japan",
+      "description": "Japan's oldest English-language newspaper.",
+      "estimated_lean": "N/A",
+      "notes": "Best English reporting on Japan."
+    },
+    {
+      "domain": "koreatimes.co.kr",
+      "name": "The Korea Times",
+      "country": "South Korea",
+      "description": "Major English-language Korean publication.",
+      "estimated_lean": "N/A",
+      "notes": "Useful for East Asia political coverage."
+    },
+    {
+      "domain": "france24.com",
+      "name": "France 24",
+      "country": "France",
+      "description": "Government-funded international news network with global English service.",
+      "estimated_lean": "Center",
+      "notes": "High credibility international broadcaster."
+    },
+    {
+      "domain": "lemonde.fr",
+      "name": "Le Monde (English edition)",
+      "country": "France",
+      "description": "France's newspaper of record; deep investigative journalism.",
+      "estimated_lean": "Center-Left",
+      "notes": "English edition increasingly strong."
+    },
+    {
+      "domain": "elpais.com",
+      "name": "El País (English)",
+      "country": "Spain",
+      "description": "Spain's largest newspaper with international focus.",
+      "estimated_lean": "Center-Left",
+      "notes": "Strong European politics coverage."
+    },
+    {
+      "domain": "thelocal.se",
+      "name": "The Local",
+      "country": "Sweden",
+      "description": "Pan-European English-language network for local reporting.",
+      "estimated_lean": "Center",
+      "notes": "Provides editions for 9 European countries."
+    },
+    {
+      "domain": "rtbf.be",
+      "name": "RTBF International",
+      "country": "Belgium",
+      "description": "Public broadcaster with English-language global reporting.",
+      "estimated_lean": "Center-Left",
+      "notes": "Strong EU policy coverage."
+    },
+    {
+      "domain": "naijanews.com",
+      "name": "Naija News",
+      "country": "Nigeria",
+      "description": "Large Nigerian digital outlet with English coverage.",
+      "estimated_lean": "N/A",
+      "notes": "Africa's biggest Anglophone market."
+    },
+    {
+      "domain": "dailymaverick.co.za",
+      "name": "Daily Maverick",
+      "country": "South Africa",
+      "description": "Respected investigative journalism outlet.",
+      "estimated_lean": "Center",
+      "notes": "Frequent Pulitzer-level investigations."
+    },
+    {
+      "domain": "mexiconewsdaily.com",
+      "name": "Mexico News Daily",
+      "country": "Mexico",
+      "description": "English-language coverage of Mexican politics and society.",
+      "estimated_lean": "N/A",
+      "notes": "Useful for North American regional coverage."
+    },
+    {
+      "domain": "folha.uol.com.br",
+      "name": "Folha de S.Paulo (English summaries)",
+      "country": "Brazil",
+      "description": "Brazil's most influential daily paper.",
+      "estimated_lean": "Center-Left",
+      "notes": "Has English digest editions."
+    }
+  ],
+
+  "technology": [
+    {
+      "domain": "theverge.com",
+      "name": "The Verge",
+      "estimated_lean": "Lean Left",
+      "description": "Major consumer tech news outlet with strong multimedia.",
+      "notes": "High authority in consumer technology."
+    },
+    {
+      "domain": "wired.com",
+      "name": "Wired",
+      "estimated_lean": "Lean Left",
+      "description": "Covers tech culture, cybersecurity, and science.",
+      "notes": "Condé Nast publication; authoritative."
+    },
+    {
+      "domain": "arstechnica.com",
+      "name": "Ars Technica",
+      "estimated_lean": "Lean Left",
+      "description": "Deep technical reporting on IT, security, and policy.",
+      "notes": "Strong technical accuracy."
+    },
+    {
+      "domain": "techcrunch.com",
+      "name": "TechCrunch",
+      "estimated_lean": "N/A",
+      "description": "Startup and VC-focused technology outlet.",
+      "notes": "High relevance in tech industry."
+    },
+    {
+      "domain": "theinformation.com",
+      "name": "The Information",
+      "estimated_lean": "N/A",
+      "description": "Premium investigative tech business outlet.",
+      "notes": "Top-tier exclusives."
+    },
+    {
+      "domain": "protocol.com",
+      "name": "Protocol (archived)",
+      "estimated_lean": "N/A",
+      "description": "Tech policy and industry analysis.",
+      "notes": "Useful historical/archival source."
+    },
+    {
+      "domain": "zdnet.com",
+      "name": "ZDNet",
+      "estimated_lean": "N/A",
+      "description": "Enterprise computing, cybersecurity, and IT coverage.",
+      "notes": "Broad enterprise tech audience."
+    },
+    {
+      "domain": "cnet.com",
+      "name": "CNET",
+      "estimated_lean": "N/A",
+      "description": "Product reviews and tech coverage.",
+      "notes": "Long-running mainstream tech outlet."
+    },
+    {
+      "domain": "ghacks.net",
+      "name": "gHacks",
+      "estimated_lean": "N/A",
+      "description": "Tech tips, software, and security coverage.",
+      "notes": "Niche but reliable."
+    },
+    {
+      "domain": "semianalysis.com",
+      "name": "SemiAnalysis",
+      "estimated_lean": "N/A",
+      "description": "Semiconductor industry analysis.",
+      "notes": "Industry-shaping research often cited by major outlets."
+    }
+  ],
+
+  "business": [
+    {
+      "domain": "barrons.com",
+      "name": "Barron's",
+      "estimated_lean": "Center-Right",
+      "description": "Financial market analysis and investment reporting.",
+      "notes": "Owned by Dow Jones."
+    },
+    {
+      "domain": "businessinsider.com",
+      "name": "Business Insider",
+      "estimated_lean": "Lean Left",
+      "description": "Business, tech, and financial news.",
+      "notes": "Massive digital reach."
+    },
+    {
+      "domain": "cnbc.com",
+      "name": "CNBC",
+      "estimated_lean": "Center",
+      "description": "Financial and business news network.",
+      "notes": "Strong real-time markets coverage."
+    },
+    {
+      "domain": "qz.com",
+      "name": "Quartz",
+      "estimated_lean": "Center",
+      "description": "Global business analysis and macroeconomic reporting.",
+      "notes": "Strong international orientation."
+    },
+    {
+      "domain": "investors.com",
+      "name": "Investor's Business Daily",
+      "estimated_lean": "Right",
+      "description": "Market analysis and investment reporting.",
+      "notes": "Credible right-leaning economic source."
+    },
+    {
+      "domain": "fortune.com",
+      "name": "Fortune",
+      "estimated_lean": "Center-Left",
+      "description": "Business news and industry rankings.",
+      "notes": "Long-standing business magazine."
+    },
+    {
+      "domain": "inc.com",
+      "name": "Inc.",
+      "estimated_lean": "N/A",
+      "description": "Entrepreneurship and small business coverage.",
+      "notes": "Strong startup focus."
+    },
+    {
+      "domain": "economictimes.indiatimes.com",
+      "name": "Economic Times",
+      "estimated_lean": "Center",
+      "description": "India's major financial newspaper.",
+      "notes": "Massive readership."
+    }
+  ],
+
+  "science_health": [
+    {
+      "domain": "scientificamerican.com",
+      "name": "Scientific American",
+      "estimated_lean": "Lean Left",
+      "description": "Science journalism and research coverage.",
+      "notes": "Oldest US science magazine."
+    },
+    {
+      "domain": "nature.com",
+      "name": "Nature News",
+      "estimated_lean": "N/A",
+      "description": "Research-focused journalism from the Nature group.",
+      "notes": "Top-tier scientific authority."
+    },
+    {
+      "domain": "sciencemag.org",
+      "name": "Science Magazine",
+      "estimated_lean": "N/A",
+      "description": "AAAS's flagship publication.",
+      "notes": "Highly authoritative."
+    },
+    {
+      "domain": "statnews.com",
+      "name": "STAT News",
+      "estimated_lean": "N/A",
+      "description": "Health, biotech, and medical industry reporting.",
+      "notes": "Known for pandemic reporting excellence."
+    },
+    {
+      "domain": "medpagetoday.com",
+      "name": "MedPage Today",
+      "estimated_lean": "N/A",
+      "description": "Clinician-focused medical news.",
+      "notes": "Highly relevant for health vertical."
+    },
+    {
+      "domain": "livescience.com",
+      "name": "LiveScience",
+      "estimated_lean": "N/A",
+      "description": "Accessible science reporting.",
+      "notes": "Large mainstream readership."
+    }
+  ],
+
+  "entertainment": [
+    {
+      "domain": "variety.com",
+      "name": "Variety",
+      "estimated_lean": "N/A",
+      "description": "Entertainment industry trade publication.",
+      "notes": "Major Hollywood industry outlet."
+    },
+    {
+      "domain": "hollywoodreporter.com",
+      "name": "Hollywood Reporter",
+      "estimated_lean": "N/A",
+      "description": "Entertainment business coverage.",
+      "notes": "Trusted by industry professionals."
+    },
+    {
+      "domain": "rollingstone.com",
+      "name": "Rolling Stone",
+      "estimated_lean": "Lean Left",
+      "description": "Music, politics, and culture magazine.",
+      "notes": "Cultural influence."
+    },
+    {
+      "domain": "pitchfork.com",
+      "name": "Pitchfork",
+      "estimated_lean": "Lean Left",
+      "description": "Music reviews and cultural criticism.",
+      "notes": "Highly influential in music journalism."
+    },
+    {
+      "domain": "ew.com",
+      "name": "Entertainment Weekly",
+      "estimated_lean": "N/A",
+      "description": "TV, film, and culture news.",
+      "notes": "Mainstream entertainment coverage."
+    },
+    {
+      "domain": "avclub.com",
+      "name": "The A.V. Club",
+      "estimated_lean": "Lean Left",
+      "description": "Pop culture and entertainment criticism.",
+      "notes": "Strong cultural commentary."
+    }
+  ],
+
+  "sports": [
+    {
+      "domain": "espn.com",
+      "name": "ESPN",
+      "estimated_lean": "N/A",
+      "description": "Major sports network with comprehensive reporting.",
+      "notes": "Largest sports news brand."
+    },
+    {
+      "domain": "theathletic.com",
+      "name": "The Athletic",
+      "estimated_lean": "N/A",
+      "description": "Subscription-based deep sports journalism.",
+      "notes": "High-quality team and league reporting."
+    },
+    {
+      "domain": "si.com",
+      "name": "Sports Illustrated",
+      "estimated_lean": "N/A",
+      "description": "Longstanding US sports magazine.",
+      "notes": "Well-known legacy brand."
+    },
+    {
+      "domain": "bleacherreport.com",
+      "name": "Bleacher Report",
+      "estimated_lean": "N/A",
+      "description": "Sports commentary and analysis.",
+      "notes": "Younger digital audience."
+    },
+    {
+      "domain": "skysports.com",
+      "name": "Sky Sports",
+      "estimated_lean": "N/A",
+      "description": "UK-based sports network.",
+      "notes": "Good international sports coverage."
+    }
+  ],
+
+  "balance_quality": [
+    {
+      "domain": "christianpost.com",
+      "name": "Christian Post",
+      "estimated_lean": "Right",
+      "description": "Christian conservative news outlet.",
+      "notes": "Useful for ideological balance."
+    },
+    {
+      "domain": "thedispatch.com",
+      "name": "The Dispatch",
+      "estimated_lean": "Center-Right",
+      "description": "Fact-based conservative journalism.",
+      "notes": "High NewsGuard score."
+    },
+    {
+      "domain": "nationalreview.com",
+      "name": "National Review",
+      "estimated_lean": "Right",
+      "description": "Longstanding conservative magazine.",
+      "notes": "Influential in US right-of-center discourse."
+    },
+    {
+      "domain": "thebulwark.com",
+      "name": "The Bulwark",
+      "estimated_lean": "Center-Right",
+      "description": "Policy analysis and commentary.",
+      "notes": "Balances more populist right outlets."
+    },
+    {
+      "domain": "reason.com",
+      "name": "Reason",
+      "estimated_lean": "Center",
+      "description": "Free-market and civil liberties reporting.",
+      "notes": "Ideological but highly factual."
+    },
+    {
+      "domain": "reuters.com",
+      "name": "Reuters",
+      "estimated_lean": "Center",
+      "description": "Wire-service neutral reporting.",
+      "notes": "Strengthens Center representation."
+    },
+    {
+      "domain": "fullfact.org",
+      "name": "Full Fact",
+      "estimated_lean": "Center",
+      "description": "UK fact-checking organization.",
+      "notes": "Expands fact-checker diversity."
+    },
+    {
+      "domain": "aap.com.au",
+      "name": "AAP FactCheck",
+      "estimated_lean": "Center",
+      "description": "Australian national fact-checker.",
+      "notes": "International fact-check coverage."
+    },
+    {
+      "domain": "brookings.edu",
+      "name": "Brookings Institution",
+      "estimated_lean": "Center-Left",
+      "description": "Policy research and analysis.",
+      "notes": "High-quality think tank."
+    },
+    {
+      "domain": "aei.org",
+      "name": "American Enterprise Institute",
+      "estimated_lean": "Center-Right",
+      "description": "Free-market public policy think tank.",
+      "notes": "Balances Brookings."
+    }
+  ],
+
+  "alternative_independent": [
+    {
+      "domain": "propublica.org",
+      "name": "ProPublica",
+      "estimated_lean": "Lean Left",
+      "description": "Independent investigative newsroom.",
+      "notes": "Pulitzer-winning nonprofit."
+    },
+    {
+      "domain": "theintercept.com",
+      "name": "The Intercept",
+      "estimated_lean": "Left",
+      "description": "Investigative and adversarial journalism.",
+      "notes": "Major independent outlet."
+    },
+    {
+      "domain": "restofworld.org",
+      "name": "Rest of World",
+      "estimated_lean": "N/A",
+      "description": "Global tech and culture reporting.",
+      "notes": "Highly respected independent nonprofit."
+    },
+    {
+      "domain": "semafor.com",
+      "name": "Semafor",
+      "estimated_lean": "Center",
+      "description": "Digital global-news startup.",
+      "notes": "Transparent sourcing model."
+    },
+    {
+      "domain": "noahpinion.substack.com",
+      "name": "Noahpinion",
+      "estimated_lean": "Center",
+      "description": "Economics and geopolitics commentary.",
+      "notes": "High-influence newsletter."
+    },
+    {
+      "domain": "platformer.news",
+      "name": "Platformer",
+      "estimated_lean": "N/A",
+      "description": "Newsletter focusing on tech platforms and regulation.",
+      "notes": "Influential in tech policy."
+    }
+  ]
+}

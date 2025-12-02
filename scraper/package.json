@@ -1,0 +1,15 @@
+{
+  "name": "newsguard-scraper",
+  "version": "1.0.0",
+  "description": "Scraper to download NewsGuard reports as PDFs",
+  "main": "newsguard-scraper.js",
+  "scripts": {
+    "scrape": "node newsguard-scraper.js news-sources.csv pdfs"
+  },
+  "keywords": ["newsguard", "scraper", "playwright", "pdf"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

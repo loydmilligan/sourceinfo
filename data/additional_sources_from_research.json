@@ -1,0 +1,371 @@
+{
+  "fact_checkers": [
+    {
+      "domain": "checkyourfact.com",
+      "name": "Check Your Fact",
+      "estimated_lean": "Center-Right",
+      "description": "Daily Caller's fact-checking division, IFCN-certified",
+      "notes": "Conservative-leaning fact-checker to balance left-leaning majority"
+    },
+    {
+      "domain": "factcheck.afp.com",
+      "name": "AFP Fact Check",
+      "estimated_lean": "Center",
+      "description": "Agence France-Presse's global fact-checking service",
+      "notes": "Major international wire service fact-checker"
+    },
+    {
+      "domain": "apnews.com/ap-fact-check",
+      "name": "AP Fact Check",
+      "estimated_lean": "Center",
+      "description": "Associated Press fact-checking vertical",
+      "notes": "Wire service fact-checking (may already be under apnews.com)"
+    },
+    {
+      "domain": "washingtonpost.com/news/fact-checker",
+      "name": "Washington Post Fact Checker",
+      "estimated_lean": "Lean Left",
+      "description": "WaPo's Pinocchio-rated fact checks",
+      "notes": "Major newspaper fact-checking operation"
+    },
+    {
+      "domain": "leadstories.com",
+      "name": "Lead Stories",
+      "estimated_lean": "Center",
+      "description": "IFCN-certified fact-checker focusing on viral claims",
+      "notes": "Focuses on social media misinformation"
+    },
+    {
+      "domain": "truthorfiction.com",
+      "name": "Truth or Fiction",
+      "estimated_lean": "Center",
+      "description": "Independent fact-checker since 1999",
+      "notes": "One of the oldest fact-checking sites"
+    },
+    {
+      "domain": "hoax-slayer.net",
+      "name": "Hoax-Slayer",
+      "estimated_lean": "Center",
+      "description": "Debunks email and social media hoaxes",
+      "notes": "Specialized in viral hoaxes"
+    },
+    {
+      "domain": "africacheck.org",
+      "name": "Africa Check",
+      "estimated_lean": "Center",
+      "description": "First independent fact-checking organization in Africa",
+      "notes": "Covers African continent claims"
+    },
+    {
+      "domain": "chequeado.com",
+      "name": "Chequeado",
+      "estimated_lean": "Center",
+      "description": "Argentina-based fact-checker, IFCN-certified",
+      "notes": "Leading Latin American fact-checker"
+    },
+    {
+      "domain": "facta.news",
+      "name": "Facta",
+      "estimated_lean": "Center",
+      "description": "Italian independent fact-checking organization",
+      "notes": "European fact-checker"
+    },
+    {
+      "domain": "boomlive.in",
+      "name": "BOOM",
+      "estimated_lean": "Center",
+      "description": "India's leading fact-checking platform",
+      "notes": "South Asian fact-checking"
+    }
+  ],
+  "international_high_traffic": [
+    {
+      "domain": "scmp.com",
+      "name": "South China Morning Post",
+      "country": "Hong Kong",
+      "estimated_lean": "Center",
+      "description": "Hong Kong's leading English-language newspaper, China-focused",
+      "notes": "Critical for Asia coverage, Alibaba-owned"
+    },
+    {
+      "domain": "aljazeera.com",
+      "name": "Al Jazeera English",
+      "country": "Qatar",
+      "estimated_lean": "N/A",
+      "description": "Major international news network, Middle East perspective",
+      "notes": "Already in DB, confirming"
+    },
+    {
+      "domain": "thetimes.co.uk",
+      "name": "The Times (UK)",
+      "country": "United Kingdom",
+      "estimated_lean": "Center-Right",
+      "description": "UK newspaper of record, high credibility",
+      "notes": "Major UK broadsheet"
+    },
+    {
+      "domain": "telegraph.co.uk",
+      "name": "The Telegraph",
+      "country": "United Kingdom",
+      "estimated_lean": "Right",
+      "description": "UK conservative broadsheet newspaper",
+      "notes": "Major UK right-leaning quality paper"
+    },
+    {
+      "domain": "thetelegraph.com",
+      "name": "The Telegraph India",
+      "country": "India",
+      "estimated_lean": "Center-Left",
+      "description": "Major Indian English-language daily",
+      "notes": "Kolkata-based national newspaper"
+    },
+    {
+      "domain": "thestar.com.my",
+      "name": "The Star",
+      "country": "Malaysia",
+      "estimated_lean": "Center",
+      "description": "Malaysia's leading English newspaper",
+      "notes": "Southeast Asian coverage"
+    },
+    {
+      "domain": "dawn.com",
+      "name": "Dawn",
+      "country": "Pakistan",
+      "estimated_lean": "Center",
+      "description": "Pakistan's oldest and most respected English newspaper",
+      "notes": "South Asian coverage"
+    },
+    {
+      "domain": "jpost.com",
+      "name": "The Jerusalem Post",
+      "country": "Israel",
+      "estimated_lean": "Center-Right",
+      "description": "Israeli English-language newspaper",
+      "notes": "Middle East coverage, right-leaning on Israel"
+    },
+    {
+      "domain": "haaretz.com",
+      "name": "Haaretz",
+      "country": "Israel",
+      "estimated_lean": "Left",
+      "description": "Israeli English-language newspaper, left-leaning",
+      "notes": "Alternative Israeli perspective to Jerusalem Post"
+    },
+    {
+      "domain": "thenationalnews.com",
+      "name": "The National",
+      "country": "UAE",
+      "estimated_lean": "Center",
+      "description": "Abu Dhabi-based English-language newspaper",
+      "notes": "Gulf region coverage"
+    },
+    {
+      "domain": "arabnews.com",
+      "name": "Arab News",
+      "country": "Saudi Arabia",
+      "estimated_lean": "Center",
+      "description": "Saudi Arabia's English-language newspaper",
+      "notes": "Middle East perspective"
+    }
+  ],
+  "trade_specialized": [
+    {
+      "domain": "politico.eu",
+      "name": "Politico Europe",
+      "estimated_lean": "Lean Left",
+      "description": "European edition of Politico covering EU politics",
+      "notes": "Distinct from US Politico, Brussels-based"
+    },
+    {
+      "domain": "defenseone.com",
+      "name": "Defense One",
+      "estimated_lean": "Center",
+      "description": "Defense and national security news",
+      "notes": "Specialized vertical - military/defense"
+    },
+    {
+      "domain": "defensenews.com",
+      "name": "Defense News",
+      "estimated_lean": "Center",
+      "description": "Military and defense industry coverage",
+      "notes": "Trade publication for defense sector"
+    },
+    {
+      "domain": "thedrive.com",
+      "name": "The Drive (The War Zone)",
+      "estimated_lean": "N/A",
+      "description": "Automotive and military/defense journalism",
+      "notes": "Strong military reporting vertical"
+    },
+    {
+      "domain": "spacenews.com",
+      "name": "SpaceNews",
+      "estimated_lean": "N/A",
+      "description": "Space industry and policy coverage",
+      "notes": "Specialized aerospace journalism"
+    },
+    {
+      "domain": "axios.com/local",
+      "name": "Axios Local",
+      "estimated_lean": "Lean Left",
+      "description": "Local news editions from Axios",
+      "notes": "May already be under axios.com"
+    },
+    {
+      "domain": "citylab.com",
+      "name": "Bloomberg CityLab",
+      "estimated_lean": "Lean Left",
+      "description": "Urban policy and cities coverage",
+      "notes": "Part of Bloomberg, urban planning focus"
+    },
+    {
+      "domain": "constructiondive.com",
+      "name": "Construction Dive",
+      "estimated_lean": "N/A",
+      "description": "Construction industry trade news",
+      "notes": "Part of Industry Dive network"
+    },
+    {
+      "domain": "educationdive.com",
+      "name": "Education Dive",
+      "estimated_lean": "N/A",
+      "description": "Education industry and policy news",
+      "notes": "Part of Industry Dive network"
+    },
+    {
+      "domain": "healthcaredive.com",
+      "name": "Healthcare Dive",
+      "estimated_lean": "N/A",
+      "description": "Healthcare industry trade news",
+      "notes": "Part of Industry Dive network"
+    },
+    {
+      "domain": "law360.com",
+      "name": "Law360",
+      "estimated_lean": "N/A",
+      "description": "Legal industry news and analysis",
+      "notes": "Major legal trade publication"
+    },
+    {
+      "domain": "insidehighered.com",
+      "name": "Inside Higher Ed",
+      "estimated_lean": "Lean Left",
+      "description": "Higher education news and analysis",
+      "notes": "Major higher ed publication"
+    },
+    {
+      "domain": "chronicle.com",
+      "name": "The Chronicle of Higher Education",
+      "estimated_lean": "Center-Left",
+      "description": "Academic and higher education coverage",
+      "notes": "Leading higher ed publication"
+    }
+  ],
+  "regional_us": [
+    {
+      "domain": "latimes.com",
+      "name": "Los Angeles Times",
+      "estimated_lean": "Lean Left",
+      "description": "Major West Coast newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "sfchronicle.com",
+      "name": "San Francisco Chronicle",
+      "estimated_lean": "Lean Left",
+      "description": "Bay Area major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "seattletimes.com",
+      "name": "The Seattle Times",
+      "estimated_lean": "Lean Left",
+      "description": "Pacific Northwest major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "denverpost.com",
+      "name": "The Denver Post",
+      "estimated_lean": "Center",
+      "description": "Colorado major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "azcentral.com",
+      "name": "The Arizona Republic",
+      "estimated_lean": "Center",
+      "description": "Arizona major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "ajc.com",
+      "name": "The Atlanta Journal-Constitution",
+      "estimated_lean": "Lean Left",
+      "description": "Georgia major newspaper",
+      "notes": "Large metro daily, major Southern paper"
+    },
+    {
+      "domain": "miamiherald.com",
+      "name": "Miami Herald",
+      "estimated_lean": "Lean Left",
+      "description": "South Florida major newspaper",
+      "notes": "Large metro daily, important for Latin America coverage"
+    },
+    {
+      "domain": "star-telegram.com",
+      "name": "Fort Worth Star-Telegram",
+      "estimated_lean": "Center",
+      "description": "North Texas major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "houstonchronicle.com",
+      "name": "Houston Chronicle",
+      "estimated_lean": "Center-Left",
+      "description": "Texas major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "startribune.com",
+      "name": "Star Tribune",
+      "estimated_lean": "Lean Left",
+      "description": "Minneapolis-St. Paul major newspaper",
+      "notes": "Large metro daily, Upper Midwest"
+    },
+    {
+      "domain": "stltoday.com",
+      "name": "St. Louis Post-Dispatch",
+      "estimated_lean": "Lean Left",
+      "description": "Missouri major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "detroitnews.com",
+      "name": "The Detroit News",
+      "estimated_lean": "Center-Right",
+      "description": "Michigan major newspaper",
+      "notes": "Large metro daily, leans right"
+    },
+    {
+      "domain": "freep.com",
+      "name": "Detroit Free Press",
+      "estimated_lean": "Lean Left",
+      "description": "Michigan major newspaper",
+      "notes": "Large metro daily, leans left (pairs with Detroit News)"
+    },
+    {
+      "domain": "cleveland.com",
+      "name": "Cleveland Plain Dealer",
+      "estimated_lean": "Center-Left",
+      "description": "Ohio major newspaper",
+      "notes": "Large metro daily"
+    },
+    {
+      "domain": "inquirer.com",
+      "name": "The Philadelphia Inquirer",
+      "estimated_lean": "Lean Left",
+      "description": "Pennsylvania major newspaper",
+      "notes": "Large metro daily, major Mid-Atlantic paper"
+    }
+  ]
+}

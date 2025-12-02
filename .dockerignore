@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+
+# Node
+web/node_modules/
+web/.parcel-cache/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+scraper/pdfs/
+*.db-journal
+.playwright-mcp/
+
+# Test files
+test_*.py
+*.test.ts
+
+# Docs (not needed in image)
+*.md
+!README.md
+
+# Screenshots
+*.png
