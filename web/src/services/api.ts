@@ -11,6 +11,8 @@ import type {
   CounternarrativeResponse,
   StatsResponse,
   SourceFilters,
+  ContentAnalysisRequest,
+  ContentAnalysisResponse,
 } from '../types';
 
 // Create axios instance with base configuration
@@ -121,6 +123,18 @@ export async function scoreSource(request: ScoreRequest): Promise<ScoreResponse>
  */
 export async function getStats(): Promise<StatsResponse> {
   const response = await api.get<StatsResponse>('/sources/stats/overview');
+  return response.data;
+}
+
+// ============================================================================
+// Content Analysis Endpoints
+// ============================================================================
+
+/**
+ * Analyze article content for quality, bias, and reliability
+ */
+export async function analyzeContent(request: ContentAnalysisRequest): Promise<ContentAnalysisResponse> {
+  const response = await api.post<ContentAnalysisResponse>('/content/analyze', request);
   return response.data;
 }
 

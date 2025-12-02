@@ -131,6 +131,75 @@ class StatsResponse(BaseModel):
 
 
 # ============================================================================
+# Content Analysis Models
+# ============================================================================
+
+class ContentAnalysisRequest(BaseModel):
+    """Request to analyze article content."""
+    url: str = Field(..., description="Article URL to fetch and analyze")
+    content: Optional[str] = Field(None, description="Optional: provide content directly instead of fetching")
+    model: Optional[str] = Field(None, description="OpenRouter model to use (default: claude-sonnet-4)")
+
+
+class AnalysisScoresResponse(BaseModel):
+    """Individual analysis scores (1-10 scale, except overall which is 1-100)."""
+    inflammatory_language: int = Field(..., ge=1, le=10, description="1=neutral, 10=highly inflammatory")
+    unsupported_claims: int = Field(..., ge=1, le=10, description="1=well-sourced, 10=many unsupported")
+    emotional_manipulation: int = Field(..., ge=1, le=10, description="1=objective, 10=manipulative")
+    factual_reporting: int = Field(..., ge=1, le=10, description="1=opinion, 10=factual")
+    overall_quality: int = Field(..., ge=1, le=100, description="Overall quality score")
+    overall_grade: str = Field(..., description="Letter grade A-F")
+
+
+class UnsupportedClaim(BaseModel):
+    """An unsupported claim found in the article."""
+    claim: str
+    issue: str
+
+
+class ContentAnalysisResponse(BaseModel):
+    """Response from content analysis endpoint."""
+    url: str
+    success: bool
+
+    # Summary
+    summary: Optional[str] = None
+
+    # Scores
+    scores: Optional[AnalysisScoresResponse] = None
+
+    # Inflammatory language
+    inflammatory_examples: list[str] = []
+    inflammatory_explanation: Optional[str] = None
+
+    # Unsupported claims
+    unsupported_claims: list[UnsupportedClaim] = []
+    claims_explanation: Optional[str] = None
+
+    # Emotional manipulation
+    manipulation_techniques: list[str] = []
+    manipulation_explanation: Optional[str] = None
+
+    # Factual reporting
+    factual_strengths: list[str] = []
+    factual_weaknesses: list[str] = []
+
+    # Bias detection
+    detected_bias: Optional[str] = None
+    bias_indicators: list[str] = []
+    bias_explanation: Optional[str] = None
+
+    # Recommendation
+    recommendation: Optional[str] = None
+
+    # Metadata
+    word_count: Optional[int] = None
+    fetch_method: Optional[str] = None
+    model_used: Optional[str] = None
+    error: Optional[str] = None
+
+
+# ============================================================================
 # Error Models
 # ============================================================================
 

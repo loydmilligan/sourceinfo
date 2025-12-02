@@ -15,6 +15,10 @@ class Settings(BaseSettings):
     api_port: int = 8000
     cors_origins: str = "http://localhost:3000,http://localhost:5173,http://localhost:8080"
 
+    # OpenRouter LLM API
+    openrouter_api_key: str = ""
+    default_analysis_model: str = "anthropic/claude-sonnet-4"
+
     @property
     def cors_origins_list(self) -> list[str]:
         """Parse CORS origins from comma-separated string."""

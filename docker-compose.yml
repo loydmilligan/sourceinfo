@@ -10,6 +10,9 @@ services:
       - API_HOST=0.0.0.0
       - API_PORT=8000
       - CORS_ORIGINS=*
+      # OpenRouter API key for content analysis (set in .env file or pass directly)
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+      - DEFAULT_ANALYSIS_MODEL=${DEFAULT_ANALYSIS_MODEL:-anthropic/claude-sonnet-4}
     volumes:
       # Persist database changes (optional - remove if you want fresh DB each time)
       - ./data/sources.db:/app/data/sources.db:ro

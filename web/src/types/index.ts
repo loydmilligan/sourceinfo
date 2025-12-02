@@ -113,6 +113,50 @@ export interface SourceFilters {
   offset?: number;
 }
 
+// Content Analysis types
+export interface ContentAnalysisRequest {
+  url: string;
+  content?: string;
+  model?: string;
+}
+
+export interface AnalysisScores {
+  inflammatory_language: number;
+  unsupported_claims: number;
+  emotional_manipulation: number;
+  factual_reporting: number;
+  overall_quality: number;
+  overall_grade: string;
+}
+
+export interface UnsupportedClaim {
+  claim: string;
+  issue: string;
+}
+
+export interface ContentAnalysisResponse {
+  url: string;
+  success: boolean;
+  summary: string | null;
+  scores: AnalysisScores | null;
+  inflammatory_examples: string[];
+  inflammatory_explanation: string | null;
+  unsupported_claims: UnsupportedClaim[];
+  claims_explanation: string | null;
+  manipulation_techniques: string[];
+  manipulation_explanation: string | null;
+  factual_strengths: string[];
+  factual_weaknesses: string[];
+  detected_bias: string | null;
+  bias_indicators: string[];
+  bias_explanation: string | null;
+  recommendation: string | null;
+  word_count: number | null;
+  fetch_method: string | null;
+  model_used: string | null;
+  error: string | null;
+}
+
 // Political lean helpers
 export const LEAN_LABELS: Record<number, string> = {
   [-2]: 'Left',
