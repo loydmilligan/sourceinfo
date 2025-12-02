@@ -22,7 +22,7 @@ class ArticleContent:
 
 async def fetch_article_content(
     url: str,
-    timeout: float = 30.0
+    timeout: float = 60.0
 ) -> ArticleContent:
     """
     Fetch and extract article content using Jina AI Reader.

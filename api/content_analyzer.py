@@ -115,7 +115,7 @@ async def analyze_content(
     url: str,
     content: str,
     model: str = "anthropic/claude-sonnet-4",
-    timeout: float = 60.0
+    timeout: float = 120.0
 ) -> ContentAnalysis:
     """
     Analyze article content using OpenRouter LLM.
