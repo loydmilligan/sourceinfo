@@ -9,7 +9,7 @@ from fastapi.responses import RedirectResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from .config import settings
-from .routes import analyze, sources, content
+from .routes import analyze, sources, content, usage
 
 # Create FastAPI app
 app = FastAPI(
@@ -49,6 +49,7 @@ app.add_middleware(
 app.include_router(analyze.router, prefix="/api")
 app.include_router(sources.router, prefix="/api")
 app.include_router(content.router, prefix="/api")
+app.include_router(usage.router, prefix="/api")
 
 
 # Mount static files if they exist (production Docker build)

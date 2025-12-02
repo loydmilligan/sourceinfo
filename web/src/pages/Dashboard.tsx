@@ -7,8 +7,10 @@ import {
   Users,
   ArrowRight,
   Search,
+  DollarSign,
+  Activity,
 } from 'lucide-react';
-import { getStats } from '../services/api';
+import { getStats, getUsageStats } from '../services/api';
 import { PageHeader, Card, LoadingSpinner, ErrorMessage } from '../components/Layout';
 import { clsx } from 'clsx';
 
@@ -16,6 +18,11 @@ export function Dashboard() {
   const { data: stats, isLoading, error } = useQuery({
     queryKey: ['stats'],
     queryFn: getStats,
+  });
+
+  const { data: usageStats } = useQuery({
+    queryKey: ['usage-stats', 30],
+    queryFn: () => getUsageStats(30),
   });
 
   if (isLoading) {
@@ -220,6 +227,72 @@ export function Dashboard() {
             </Link>
           </div>
         </Card>
+
+        {/* API Usage & Costs */}
+        {usageStats && (
+          <Card>
+            <div className="flex items-center gap-2 mb-4">
+              <DollarSign className="w-5 h-5 text-green-500" />
+              <h2 className="text-lg font-semibold text-gray-900">API Usage & Costs (30 days)</h2>
+            </div>
+            <div className="space-y-4">
+              {/* Total cost */}
+              <div className="flex items-center justify-between">
+                <span className="text-gray-600">Total Cost</span>
+                <span className="text-2xl font-bold text-gray-900">
+                  ${usageStats.totals.total_cost.toFixed(4)}
+                </span>
+              </div>
+
+              {/* API calls */}
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-600">Total Calls</span>
+                <span className="font-medium text-gray-900">{usageStats.totals.total_calls}</span>
+              </div>
+
+              {/* Success rate */}
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-600">Success Rate</span>
+                <span className="font-medium text-gray-900">
+                  {usageStats.totals.total_calls > 0
+                    ? `${Math.round((usageStats.totals.successful_calls / usageStats.totals.total_calls) * 100)}%`
+                    : 'N/A'}
+                </span>
+              </div>
+
+              {/* Tokens */}
+              {usageStats.totals.total_input_tokens > 0 && (
+                <div className="pt-3 border-t border-gray-100">
+                  <div className="flex items-center justify-between text-sm mb-1">
+                    <span className="text-gray-600">Input Tokens</span>
+                    <span className="font-medium text-gray-700">
+                      {usageStats.totals.total_input_tokens.toLocaleString()}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Output Tokens</span>
+                    <span className="font-medium text-gray-700">
+                      {usageStats.totals.total_output_tokens.toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              {/* Breakdown by model */}
+              {usageStats.by_model.length > 0 && (
+                <div className="pt-3 border-t border-gray-100">
+                  <p className="text-xs text-gray-500 mb-2">By Model:</p>
+                  {usageStats.by_model.slice(0, 3).map((model) => (
+                    <div key={model.model_used} className="flex items-center justify-between text-xs mb-1">
+                      <span className="text-gray-600 truncate">{model.model_used.split('/')[1]}</span>
+                      <span className="font-medium text-gray-700">${model.cost.toFixed(4)}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </Card>
+        )}
 
         {/* Quick tips */}
         <Card>

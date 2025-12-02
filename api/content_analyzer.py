@@ -5,6 +5,7 @@ import json
 from typing import Optional
 from dataclasses import dataclass, field
 from .config import settings
+from .usage_tracker import log_api_usage, calculate_cost, UsageLog
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
@@ -180,6 +181,12 @@ async def analyze_content(
             # Extract the response content
             response_text = result["choices"][0]["message"]["content"]
 
+            # Extract token usage for cost tracking
+            usage_data = result.get("usage", {})
+            input_tokens = usage_data.get("prompt_tokens", 0)
+            output_tokens = usage_data.get("completion_tokens", 0)
+            cost = calculate_cost(model, input_tokens, output_tokens)
+
             # Parse JSON response
             try:
                 # Handle potential markdown code blocks
@@ -198,7 +205,7 @@ async def analyze_content(
                 )
 
             # Build the ContentAnalysis object
-            return ContentAnalysis(
+            analysis_result = ContentAnalysis(
                 url=url,
                 success=True,
                 summary=analysis_data.get("summary"),
@@ -226,7 +233,33 @@ async def analyze_content(
                 error=None
             )
 
+            # Log successful API usage
+            log_api_usage(UsageLog(
+                api_name="openrouter",
+                endpoint="/chat/completions",
+                model_used=model,
+                input_tokens=input_tokens,
+                output_tokens=output_tokens,
+                estimated_cost_usd=cost,
+                url=url,
+                success=True
+            ))
+
+            return analysis_result
+
     except httpx.TimeoutException:
+        # Log failed API call
+        log_api_usage(UsageLog(
+            api_name="openrouter",
+            endpoint="/chat/completions",
+            model_used=model,
+            input_tokens=0,
+            output_tokens=0,
+            estimated_cost_usd=0.0,
+            url=url,
+            success=False,
+            error_message="Request timed out"
+        ))
         return ContentAnalysis(
             url=url,
             success=False,
@@ -234,6 +267,18 @@ async def analyze_content(
             model_used=model
         )
     except Exception as e:
+        # Log failed API call
+        log_api_usage(UsageLog(
+            api_name="openrouter",
+            endpoint="/chat/completions",
+            model_used=model,
+            input_tokens=0,
+            output_tokens=0,
+            estimated_cost_usd=0.0,
+            url=url,
+            success=False,
+            error_message=str(e)
+        ))
         return ContentAnalysis(
             url=url,
             success=False,

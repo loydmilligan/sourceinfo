@@ -13,6 +13,7 @@ import type {
   SourceFilters,
   ContentAnalysisRequest,
   ContentAnalysisResponse,
+  UsageStatsResponse,
 } from '../types';
 
 // Create axios instance with base configuration
@@ -135,6 +136,20 @@ export async function getStats(): Promise<StatsResponse> {
  */
 export async function analyzeContent(request: ContentAnalysisRequest): Promise<ContentAnalysisResponse> {
   const response = await api.post<ContentAnalysisResponse>('/content/analyze', request);
+  return response.data;
+}
+
+// ============================================================================
+// Usage Stats
+// ============================================================================
+
+/**
+ * Get API usage statistics and cost breakdown
+ */
+export async function getUsageStats(days: number = 30): Promise<UsageStatsResponse> {
+  const response = await api.get<UsageStatsResponse>('/usage/stats', {
+    params: { days }
+  });
   return response.data;
 }
 

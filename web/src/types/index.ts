@@ -157,6 +157,57 @@ export interface ContentAnalysisResponse {
   error: string | null;
 }
 
+// Usage Stats types
+export interface ApiUsageBreakdown {
+  api_name: string;
+  calls: number;
+  cost: number;
+}
+
+export interface ModelUsageBreakdown {
+  model_used: string;
+  calls: number;
+  input_tokens: number;
+  output_tokens: number;
+  cost: number;
+  avg_cost_per_call: number;
+}
+
+export interface DailyUsage {
+  date: string;
+  calls: number;
+  input_tokens: number;
+  output_tokens: number;
+  cost: number;
+}
+
+export interface ExpensiveAnalysis {
+  url: string;
+  model_used: string | null;
+  input_tokens: number;
+  output_tokens: number;
+  cost: number;
+  timestamp: string;
+}
+
+export interface UsageTotals {
+  total_calls: number;
+  total_input_tokens: number;
+  total_output_tokens: number;
+  total_cost: number;
+  successful_calls: number;
+  failed_calls: number;
+}
+
+export interface UsageStatsResponse {
+  period_days: number;
+  totals: UsageTotals;
+  by_api: ApiUsageBreakdown[];
+  by_model: ModelUsageBreakdown[];
+  daily: DailyUsage[];
+  top_expensive: ExpensiveAnalysis[];
+}
+
 // Political lean helpers
 export const LEAN_LABELS: Record<number, string> = {
   [-2]: 'Left',

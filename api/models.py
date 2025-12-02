@@ -200,6 +200,66 @@ class ContentAnalysisResponse(BaseModel):
 
 
 # ============================================================================
+# Usage Stats Models
+# ============================================================================
+
+class ApiUsageBreakdown(BaseModel):
+    """Usage breakdown by API."""
+    api_name: str
+    calls: int
+    cost: float
+
+
+class ModelUsageBreakdown(BaseModel):
+    """Usage breakdown by model."""
+    model_used: str
+    calls: int
+    input_tokens: int
+    output_tokens: int
+    cost: float
+    avg_cost_per_call: float
+
+
+class DailyUsage(BaseModel):
+    """Daily usage summary."""
+    date: str
+    calls: int
+    input_tokens: int
+    output_tokens: int
+    cost: float
+
+
+class ExpensiveAnalysis(BaseModel):
+    """Info about an expensive analysis."""
+    url: str
+    model_used: Optional[str]
+    input_tokens: int
+    output_tokens: int
+    cost: float
+    timestamp: str
+
+
+class UsageTotals(BaseModel):
+    """Total usage metrics."""
+    total_calls: int
+    total_input_tokens: int
+    total_output_tokens: int
+    total_cost: float
+    successful_calls: int
+    failed_calls: int
+
+
+class UsageStatsResponse(BaseModel):
+    """Response from usage stats endpoint."""
+    period_days: int
+    totals: UsageTotals
+    by_api: list[ApiUsageBreakdown]
+    by_model: list[ModelUsageBreakdown]
+    daily: list[DailyUsage]
+    top_expensive: list[ExpensiveAnalysis]
+
+
+# ============================================================================
 # Error Models
 # ============================================================================
 

@@ -3,6 +3,7 @@
 import httpx
 from typing import Optional
 from dataclasses import dataclass
+from .usage_tracker import log_api_usage, UsageLog
 
 # Jina AI Reader API - converts URLs to clean markdown
 JINA_READER_URL = "https://r.jina.ai/"
@@ -80,6 +81,18 @@ async def fetch_article_content(
 
             word_count = len(content.split())
 
+            # Log successful Jina API usage (free, $0 cost)
+            log_api_usage(UsageLog(
+                api_name="jina",
+                endpoint="/reader",
+                model_used=None,
+                input_tokens=0,
+                output_tokens=0,
+                estimated_cost_usd=0.0,
+                url=url,
+                success=True
+            ))
+
             return ArticleContent(
                 url=url,
                 title=title,
@@ -91,6 +104,18 @@ async def fetch_article_content(
             )
 
     except httpx.TimeoutException:
+        # Log failed Jina API call
+        log_api_usage(UsageLog(
+            api_name="jina",
+            endpoint="/reader",
+            model_used=None,
+            input_tokens=0,
+            output_tokens=0,
+            estimated_cost_usd=0.0,
+            url=url,
+            success=False,
+            error_message="Request timed out"
+        ))
         return ArticleContent(
             url=url,
             title=None,
@@ -101,6 +126,18 @@ async def fetch_article_content(
             error="Request timed out"
         )
     except Exception as e:
+        # Log failed Jina API call
+        log_api_usage(UsageLog(
+            api_name="jina",
+            endpoint="/reader",
+            model_used=None,
+            input_tokens=0,
+            output_tokens=0,
+            estimated_cost_usd=0.0,
+            url=url,
+            success=False,
+            error_message=str(e)
+        ))
         return ArticleContent(
             url=url,
             title=None,
