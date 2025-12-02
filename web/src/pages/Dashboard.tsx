@@ -8,7 +8,6 @@ import {
   ArrowRight,
   Search,
   DollarSign,
-  Activity,
 } from 'lucide-react';
 import { getStats, getUsageStats } from '../services/api';
 import { PageHeader, Card, LoadingSpinner, ErrorMessage } from '../components/Layout';
